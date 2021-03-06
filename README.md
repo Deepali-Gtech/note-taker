@@ -4,10 +4,13 @@
 # note-taker
 This application will use an Express.js back end and will save and retrieve note data from a JSON file.
 
-#  link 
+# Deployment
+
+Link to the deployed website:
+https://ancient-atoll-10990.herokuapp.com/
 
 
-## Below are the screen shorts for app. 
+## Below are the screen shorts for website. 
 ![Website](./public/assets/note.png)
 
 
