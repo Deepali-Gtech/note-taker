@@ -17,7 +17,6 @@ module.exports = (app) => {
         } else {
             lastId = 0;
         }
-        // console.log(lastId);
         //Starts the id's at 1
         const id = lastId + 1;
 
@@ -34,11 +33,9 @@ module.exports = (app) => {
     app.delete('/api/notes/:id', (req, res) => {
         //finds note by id, then converts the string into a JSON object with the id parameters of the request made
         let findNote = noteList.find(({ id }) => id === JSON.parse(req.params.id));
-        console.log(req.params.id);
+
         let nodeElement = noteList.filter(node => node.id == req.params.id);    
-        //let nodeElement = noteList.filter(node => console.log(node));    
-        console.log(nodeElement);
-        console.log(noteList.indexOf(nodeElement[0]));
+        
         //Delete object matching the index of the note ID
         noteList.splice(noteList.indexOf(nodeElement[0]), 1);
         fs.writeFileSync('./db/db.json', JSON.stringify(noteList));
